@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	/* Colors */
+	--black: #121212;
+	--darkPurple: #322653;
+	--darkGray: #474747;
+	--pink: #dd58d6;
+	--lightPurple: #893cdc;
+	--white: #fefefe;
+	/* Fonts */
+	--fontBold: "manropeBold";
+	--fontSemiBold: "manropeSemiBold";
+	--fontMedium: "manropeMedium";
+}
+
+@font-face {
+	font-family: "manropeBold";
+	src: url("./fonts/Manrope-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "manropeSemiBold";
+	src: url("./fonts/Manrope-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "manropeMedium";
+	src: url("./fonts/Manrope-Medium.ttf") format("truetype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: var(--fontMedium);
+	background-color: var(--darkPurple);
+	color: var(--white);
+	min-height: 100dvh;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn {
+	min-width: 12rem;
+	min-height: 3rem;
+	font-family: var(--fontSemiBold);
+	border-radius: 0.2rem;
+	background-color: var(--pink);
+	color: var(--white);
+	transition: all 50ms ease-in-out;
+
+	&:active {
+		transform: scale(1.1);
+	}
+}
+
+.input {
+	all: unset;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	font-size: 1.6rem;
+	font-family: var(--fontSemiBold);
+	background-color: transparent;
+}
+
+.textArea {
+	font-family: var(--fontMedium);
+	font-size: 1.6rem;
+	padding: 1rem;
+	background-color: var(--darkGray);
+	outline: none;
+}
+
+/* Container */
+.contain {
+	width: 100%;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 576px) {
+	.contain {
+		width: 54rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.contain {
+		width: 72rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.contain {
+		width: 96rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.contain {
+		width: 114rem;
+	}
+}
+
+@media (min-width: 1400px) {
+	.contain {
+		width: 137rem;
+	}
+}
