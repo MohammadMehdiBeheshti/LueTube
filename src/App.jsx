@@ -4,12 +4,10 @@ import Header from "./Components/Header.jsx";
 import Main from "./Components/Main.jsx";
 import Footer from "./Components/Footer.jsx";
 
-const data = [];
-const previousData = structuredClone(data);
-
 export default function App() {
-	const [cards, setCards] = useState(data);
+	const [cards, setCards] = useState([]);
 	const [openInputPrompt, setOpenInputPrompt] = useState(false);
+	const previousData = structuredClone(data);
 
 	const handleSearch = (e) => {
 		const value = e.currentTarget.value;
