@@ -6,34 +6,36 @@ import Footer from "./Components/Footer.jsx";
 
 export default function App() {
 	const [cards, setCards] = useState([]);
+	const [filteredCards, setFilteredCards] = useState([]);
 	const [openInputPrompt, setOpenInputPrompt] = useState(false);
-	const previousData = structuredClone(data);
 
 	const handleSearch = (e) => {
-		const value = e.currentTarget.value;
+		const value = e.currentTarget.value.toLowerCase();
+
 		if (value) {
-			const filteredData = previousData.filter((each) =>
-				each.title.toLowerCase().includes(value.toLowerCase())
+			const filteredData = cards.filter((each) =>
+				each.title.toLowerCase().includes(value)
 			);
-			setCards(filteredData);
+			setFilteredCards(filteredData);
 		} else {
-			setCards(dummyData);
+			setFilteredCards(cards);
 		}
 	};
 
 	return (
 		<>
-			<div className={openInputPrompt && "blur-md pointer-events-none"}>
+			<div className={openInputPrompt ? "blur-md pointer-events-none" : null}>
 				<Header
 					setOpenInputPrompt={setOpenInputPrompt}
 					handleSearch={handleSearch}
 				/>
-				<Main cards={cards} />
+				<Main cards={filteredCards} />
 				<Footer cards={cards} />
 			</div>
 			<InputPrompt
 				hidden={openInputPrompt}
 				setOpenInputPrompt={setOpenInputPrompt}
+				setFilteredCards={setFilteredCards}
 				setCards={setCards}
 			/>
 		</>
