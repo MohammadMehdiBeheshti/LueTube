@@ -12,19 +12,6 @@ export default {
 			white: "#fefefe",
 		},
 
-		fontSize: {
-			tn: "1.2rem",
-			sm: "1.4rem",
-			md: "1.6rem",
-			mdp: "2rem",
-			lg: "2.4rem",
-			xlg: "3.2rem",
-		},
-
-		borderRadius: {
-			def: "0.2rem",
-		},
-
 		fontFamily: {
 			fontBold: "manropeBold",
 			fontSB: "manropeSemiBold",
@@ -32,6 +19,26 @@ export default {
 		},
 
 		extend: {
+			screens: {
+				sm: "576px",
+				md: "768px",
+				lg: "992px",
+				xlg: "1200px",
+			},
+
+			fontSize: {
+				tn: "1.2rem",
+				sm: "1.4rem",
+				md: "1.6rem",
+				mdp: "2rem",
+				lg: "2.4rem",
+				xlg: "3.2rem",
+			},
+
+			borderRadius: {
+				def: "0.2rem",
+			},
+
 			spacing: (() => {
 				const spacing = {};
 				for (let i = 1; i <= 1000; i++) {
