@@ -36,7 +36,7 @@ export default {
 				md: "1.6rem",
 				mdp: "2rem",
 				lg: "2.4rem",
-				xlg: "3.2rem",
+				xlg: "2.8rem",
 			},
 
 			borderRadius: {

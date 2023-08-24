@@ -9,10 +9,6 @@ export default function Main({ cards }) {
 function Card({ data }) {
 	const { title, imgURL, link, description, date } = data;
 
-	const openLinks = (url) => {
-		window.open(url, "_blank");
-	};
-
 	return (
 		<div className="w-35 rounded-def bg-blackPurple overflow-hidden">
 			<img
@@ -25,13 +21,9 @@ function Card({ data }) {
 			<p className="text-sm mx-2">{description}</p>
 			<section className="flex justify-between items-center mx-2 mt-3 mb-2">
 				<span className="font-fontSB">{date}</span>
-				<button
-					type="button"
-					className="btn w-12"
-					onClick={() => openLinks(link)}
-				>
+				<a className="btn w-12 flex justify-center items-center" href={link}>
 					View
-				</button>
+				</a>
 			</section>
 		</div>
 	);

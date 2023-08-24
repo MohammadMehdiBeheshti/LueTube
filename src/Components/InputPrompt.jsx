@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { HeadingIcon, ImgIcon, LinkIcon } from "./Icons";
+import { HeadingIcon, ImgIcon, LinkIcon, XIcon } from "./Icons";
 
 export default function InputPrompt({
 	hidden,
@@ -40,7 +40,11 @@ export default function InputPrompt({
 
 	return (
 		hidden && (
-			<form className="form center w-35 p-2 rounded-def z-10 bg-lightPurple">
+			<form
+				className="form center w-35 p-2 rounded-def z-10 bg-lightPurple dark:bg-blackGray"
+				onSubmit={handleForm}
+			>
+				<h2 className="text-center text-xlg font-bold mb-2">Add new item</h2>
 				<section className="h-5 pl-1 mb-2 rounded-def flex items-center bg-darkGray">
 					<HeadingIcon />
 					<input
@@ -63,6 +67,7 @@ export default function InputPrompt({
 						className="input"
 						onChange={useForm}
 						value={form.imgURL}
+						required
 					/>
 				</section>
 
@@ -75,6 +80,7 @@ export default function InputPrompt({
 						className="input"
 						onChange={useForm}
 						value={form.link}
+						required
 					/>
 				</section>
 
@@ -88,12 +94,16 @@ export default function InputPrompt({
 					required
 				></textarea>
 
-				<button
-					type="submit"
-					className="btn w-full h-5 text-mdp"
-					onClick={handleForm}
-				>
+				<button type="submit" className="btn w-full h-5 text-mdp">
 					Add
+				</button>
+
+				<button
+					type="button"
+					className="absolute z-10 top-0 right-0"
+					onClick={() => setOpenInputPrompt(false)}
+				>
+					<XIcon />
 				</button>
 			</form>
 		)
