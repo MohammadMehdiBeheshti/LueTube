@@ -11,7 +11,6 @@ export default function App() {
 
 	const handleSearch = (e) => {
 		const value = e.currentTarget.value.toLowerCase();
-
 		if (value) {
 			const filteredData = cards.filter((each) =>
 				each.title.toLowerCase().includes(value)

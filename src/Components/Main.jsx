@@ -14,7 +14,7 @@ function Card({ data }) {
 	};
 
 	return (
-		<div className="w-35 rounded-def bg-black overflow-hidden">
+		<div className="w-35 rounded-def bg-blackPurple overflow-hidden">
 			<img
 				src={imgURL}
 				alt="Card"
@@ -25,7 +25,11 @@ function Card({ data }) {
 			<p className="text-sm mx-2">{description}</p>
 			<section className="flex justify-between items-center mx-2 mt-3 mb-2">
 				<span className="font-fontSB">{date}</span>
-				<button type="button" className="btn" onClick={() => openLinks(link)}>
+				<button
+					type="button"
+					className="btn w-12"
+					onClick={() => openLinks(link)}
+				>
 					View
 				</button>
 			</section>

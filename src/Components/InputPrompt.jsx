@@ -26,9 +26,7 @@ export default function InputPrompt({
 	const handleForm = (e) => {
 		e.preventDefault();
 		setOpenInputPrompt(false);
-
 		if (Object.values(form).every((each) => each) === false) return;
-
 		setCards((c) => [...c, form]);
 		setFilteredCards((c) => [...c, form]);
 		setForm({
@@ -52,6 +50,7 @@ export default function InputPrompt({
 						className="input"
 						onChange={useForm}
 						value={form.title}
+						required
 					/>
 				</section>
 
@@ -86,6 +85,7 @@ export default function InputPrompt({
 					className="textArea mb-1.5"
 					onChange={useForm}
 					value={form.description}
+					required
 				></textarea>
 
 				<button
