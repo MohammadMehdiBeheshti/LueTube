@@ -49,6 +49,11 @@ body {
 	min-height: 100dvh;
 }
 
+svg {
+	all: unset;
+	vertical-align: middle;
+}
+
 .center {
 	position: absolute;
 	top: 50%;
@@ -57,7 +62,7 @@ body {
 }
 
 .btn {
-	min-width: 12rem;
+	min-width: 3.5rem;
 	min-height: 3.5rem;
 	font-family: var(--fontSemiBold);
 	border-radius: 0.2rem;
