@@ -24,10 +24,9 @@ export default {
 
 		extend: {
 			screens: {
-				sm: "576px",
-				md: "768px",
-				lg: "992px",
-				xlg: "1200px",
+				lg: { max: "992px" },
+				md: { max: "768px" },
+				sm: { max: "576px" },
 			},
 
 			fontSize: {
