@@ -18,17 +18,17 @@
 
 @font-face {
 	font-family: "manropeBold";
-	src: url("./fonts/Manrope-Bold.ttf") format("truetype");
+	src: url("./fonts/manrope-bold.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "manropeSemiBold";
-	src: url("./fonts/Manrope-SemiBold.ttf") format("truetype");
+	src: url("./fonts/manrope-semibold.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "manropeMedium";
-	src: url("./fonts/Manrope-Medium.ttf") format("truetype");
+	src: url("./fonts/manrope-medium.ttf") format("truetype");
 }
 
 * {
