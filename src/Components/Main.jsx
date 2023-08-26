@@ -21,7 +21,10 @@ function Card({ data }) {
 			<p className="text-sm mx-2">{description}</p>
 			<section className="flex justify-between items-center mx-2 mt-3 mb-2">
 				<span className="font-fontSB">{date}</span>
-				<a className="btn w-12 flex justify-center items-center" href={link}>
+				<a
+					className="btn w-12 h-3.5 flex justify-center items-center"
+					href={link}
+				>
 					View
 				</a>
 			</section>

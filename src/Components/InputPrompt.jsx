@@ -41,7 +41,7 @@ export default function InputPrompt({
 	return (
 		hidden && (
 			<form
-				className="form center w-35 p-2 rounded-def z-10 bg-lightPurple dark:bg-blackGray"
+				className="form center w-35 p-2 rounded-def z-10 bg-lightPurple dark:bg-blackGray sm:w-[80%]"
 				onSubmit={handleForm}
 			>
 				<h2 className="text-center text-xlg font-bold mb-2">Add new item</h2>
@@ -85,7 +85,6 @@ export default function InputPrompt({
 				</section>
 
 				<textarea
-					cols="31"
 					name="description"
 					placeholder="Description..."
 					className="textArea mb-1.5"
